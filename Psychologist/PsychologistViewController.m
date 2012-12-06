@@ -9,21 +9,25 @@
 #import "PsychologistViewController.h"
 
 @interface PsychologistViewController ()
-
+@property (nonatomic) int diagnosis;
 @end
 
 @implementation PsychologistViewController
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+- (void)setAndShowDiagnosis:(int)diagnosis {
+    self.diagnosis = diagnosis;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)flying {
+    [self setAndShowDiagnosis:85];
 }
+
+- (IBAction)apple {
+    [self setAndShowDiagnosis:100];
+}
+
+- (IBAction)dragons {
+    [self setAndShowDiagnosis:20];
+}
+
 
 @end

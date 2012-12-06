@@ -37,6 +37,7 @@
 		84928A6816704C9600456556 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		84928A6A16704C9600456556 /* PsychologistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PsychologistViewController.h; sourceTree = "<group>"; };
 		84928A6B16704C9600456556 /* PsychologistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PsychologistViewController.m; sourceTree = "<group>"; };
+		84928AE4167051C100456556 /* Happiness.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Happiness.xcodeproj; path = ../Happiness/Happiness.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +60,7 @@
 				84928A5516704C9600456556 /* Psychologist */,
 				84928A4E16704C9600456556 /* Frameworks */,
 				84928A4C16704C9600456556 /* Products */,
+				84928AE4167051C100456556 /* Happiness.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -293,6 +295,7 @@
 				84928A7116704C9600456556 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
