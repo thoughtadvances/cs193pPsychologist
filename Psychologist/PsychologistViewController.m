@@ -24,6 +24,8 @@
     if ([segue.identifier isEqualToString:@"ShowDiagnosis"]) {
         // Don't check here because a crash means the developer needs to change
         //  something
+        NSLog(@"self.destinationViewController = %@",
+              segue.destinationViewController);
         [segue.destinationViewController setHappiness:self.diagnosis];
     }
 }

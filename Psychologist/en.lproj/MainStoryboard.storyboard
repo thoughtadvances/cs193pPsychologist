@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--Psychologist View Controller-->
+        <!--Psychologist View Controller - Psychologist-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="PsychologistViewController" sceneMemberID="viewController">
@@ -69,9 +69,9 @@
                             <constraint firstItem="wEG-Y8-VUi" firstAttribute="top" secondItem="niy-yC-M1p" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="h55-2i-9pa"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="lfE-ay-C0Z"/>
+                    <navigationItem key="navigationItem" title="Psychologist" id="lfE-ay-C0Z"/>
                     <connections>
-                        <segue destination="k5z-SH-8m9" kind="push" identifier="ShowDiagnosis" id="7T7-dR-aw9"/>
+                        <segue destination="ijY-h4-JCw" kind="push" identifier="ShowDiagnosis" id="Cpp-K6-dHh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
@@ -79,33 +79,33 @@
             <point key="canvasLocation" x="653" y="90"/>
         </scene>
         <!--Happiness View Controller-->
-        <scene sceneID="SqA-fk-hif">
+        <scene sceneID="bAl-ud-0lA">
             <objects>
-                <viewController id="k5z-SH-8m9" customClass="HappinessViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="C7C-6U-hwY">
+                <viewController id="ijY-h4-JCw" customClass="HappinessViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zL8-cC-dC3">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NwM-ib-aEC" customClass="FaceView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ow-85-1oy" customClass="FaceView">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="NwM-ib-aEC" firstAttribute="top" secondItem="C7C-6U-hwY" secondAttribute="top" type="default" id="12z-tX-kKQ"/>
-                            <constraint firstItem="NwM-ib-aEC" firstAttribute="bottom" secondItem="C7C-6U-hwY" secondAttribute="bottom" type="default" id="LAk-IA-wTg"/>
-                            <constraint firstItem="NwM-ib-aEC" firstAttribute="leading" secondItem="C7C-6U-hwY" secondAttribute="leading" type="default" id="sqx-jH-0gj"/>
-                            <constraint firstItem="NwM-ib-aEC" firstAttribute="trailing" secondItem="C7C-6U-hwY" secondAttribute="trailing" type="default" id="xEV-Xr-MhT"/>
+                            <constraint firstItem="0Ow-85-1oy" firstAttribute="top" secondItem="zL8-cC-dC3" secondAttribute="top" type="default" id="gYP-Ue-0Hl"/>
+                            <constraint firstItem="0Ow-85-1oy" firstAttribute="leading" secondItem="zL8-cC-dC3" secondAttribute="leading" type="default" id="lt4-dZ-QMk"/>
+                            <constraint firstItem="0Ow-85-1oy" firstAttribute="bottom" secondItem="zL8-cC-dC3" secondAttribute="bottom" type="default" id="ocg-Z0-ES8"/>
+                            <constraint firstItem="0Ow-85-1oy" firstAttribute="trailing" secondItem="zL8-cC-dC3" secondAttribute="trailing" type="default" id="sZZ-iW-xEt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="CFS-db-o2a"/>
+                    <navigationItem key="navigationItem" id="9ey-43-fvU"/>
                     <connections>
-                        <outlet property="faceView" destination="NwM-ib-aEC" id="VJb-d7-L63"/>
+                        <outlet property="faceView" destination="0Ow-85-1oy" id="IqU-34-5NM"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wff-I2-9Cg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="81V-0n-ld7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1090" y="90"/>
+            <point key="canvasLocation" x="1071" y="90"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SCd-jf-a8F">
