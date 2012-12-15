@@ -14,10 +14,21 @@
 @end
 
 @implementation PsychologistViewController
+- (HappinessViewController *)splitViewHappinessViewController {
+    id happinessViewController = [self.splitViewController.viewControllers
+                                  lastObject];
+    if (![happinessViewController isKindOfClass:
+          [HappinessViewController class]]) {
+        happinessViewController = nil;
+    }
+    return happinessViewController;
+}
+
 - (void)setAndShowDiagnosis:(int)diagnosis {
     self.diagnosis = diagnosis;
-    // PsychologistViewController sends the signal to ShowDiagonsis segue
-    [self performSegueWithIdentifier:@"ShowDiagnosis" sender:self];
+    if ([self splitViewHappinessViewController]) {
+        [[self splitViewHappinessViewController] setHappiness:diagnosis];
+    } else [self performSegueWithIdentifier:@"ShowDiagnosis" sender:self];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
