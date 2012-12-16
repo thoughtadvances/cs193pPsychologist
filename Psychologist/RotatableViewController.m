@@ -6,6 +6,44 @@
 //  Copyright (c) 2012 ThoughtAdvances. All rights reserved.
 //
 
+// How to Use
+//  After importing the 3 files into your project:
+//  - Make your master UIViewController a member of class
+//      RotatableViewController
+//  - Add a UIToolbar IBOUtlet to the Class @implementation of your detail
+//      UIViewController: @property (nonatomic) IBOutlet UIToolbar *toolbar;
+//  - Add a UIToolbar to your detail UIViewController
+//  - Hook up the toolbar to this @property
+//  - Import the SplitViewBarButtonItemPresenter @protocol in the Class of your
+//      detail UIViewController: #import "SplitViewBarButtonItemPresenter.h"
+//  - Publicly declare that the Class of your detail UIViewController implements
+//      the @protocol: <SplitViewBarButtonItemPresenter>
+//  - Privately declare that the Class of your detail UIViewController is
+//      the UISplitViewController's delegate: <UISplitViewControllerDelegate>
+//  - Explicitly @synthesize splitViewBarButtonItem in the Class of the detail
+//      UIViewController:
+//      @synthesize splitViewBarButtonItem = _splitViewBarButtonItem;
+//  - Set a Title for the master UIViewController in the storyboard using
+//      XCode's Attributes Inspector in the storyboard.  This title is used
+//      as the button's text
+//  - Override the setter for the splitViewBarButtonItem so that it
+//      puts the barButtonItem in the toolbar.  Code should look like this:
+// Setter for the splitViewBarButtonItem
+//- (void)setSplitViewBarButtonItem:(UIBarButtonItem *)splitViewBarButtonItem {
+//    if (_splitViewBarButtonItem != splitViewBarButtonItem) {
+//        // Update only if the old is different from the new
+//        NSMutableArray *toolbarItems = [self.toolbar.items mutableCopy];
+//        if (_splitViewBarButtonItem) { // Remove old button if it exists
+//            [toolbarItems removeObject:_splitViewBarButtonItem];
+//        }
+//        if (splitViewBarButtonItem) { // Add new button if it exists
+//            [toolbarItems insertObject:splitViewBarButtonItem atIndex:0];
+//        }
+//        self.toolbar.items = toolbarItems;
+//        _splitViewBarButtonItem = splitViewBarButtonItem;
+//    }
+//}
+
 #import "RotatableViewController.h"
 #import "SplitViewBarButtonItemPresenter.h"
 
