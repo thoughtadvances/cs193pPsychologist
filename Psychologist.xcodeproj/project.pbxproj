@@ -21,6 +21,7 @@
 		84928A6616704C9600456556 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84928A6516704C9600456556 /* Default-568h@2x.png */; };
 		84928A6916704C9600456556 /* iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84928A6716704C9600456556 /* iPhone.storyboard */; };
 		84928A6C16704C9600456556 /* PsychologistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84928A6B16704C9600456556 /* PsychologistViewController.m */; };
+		84AA4027167DA5BD009070F3 /* WebsiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84AA4026167DA5BD009070F3 /* WebsiteViewController.m */; };
 		84C12D6F16746D33003F365A /* iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C12D6E16746D33003F365A /* iPad.storyboard */; };
 		84F9C03C167C71DE00AAD9F3 /* RotatableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F9C03B167C71DE00AAD9F3 /* RotatableViewController.m */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,8 @@
 		84928A6816704C9600456556 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/iPhone.storyboard; sourceTree = "<group>"; };
 		84928A6A16704C9600456556 /* PsychologistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PsychologistViewController.h; sourceTree = "<group>"; };
 		84928A6B16704C9600456556 /* PsychologistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PsychologistViewController.m; sourceTree = "<group>"; };
+		84AA4025167DA5BD009070F3 /* WebsiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebsiteViewController.h; sourceTree = "<group>"; };
+		84AA4026167DA5BD009070F3 /* WebsiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebsiteViewController.m; sourceTree = "<group>"; };
 		84C12D6E16746D33003F365A /* iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = iPad.storyboard; path = ../iPad.storyboard; sourceTree = "<group>"; };
 		84F9C038167C717200AAD9F3 /* SplitViewBarButtonItemPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplitViewBarButtonItemPresenter.h; sourceTree = "<group>"; };
 		84F9C03A167C71DE00AAD9F3 /* RotatableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RotatableViewController.h; sourceTree = "<group>"; };
@@ -124,6 +127,8 @@
 		84928A5616704C9600456556 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				84AA4025167DA5BD009070F3 /* WebsiteViewController.h */,
+				84AA4026167DA5BD009070F3 /* WebsiteViewController.m */,
 				84F9C038167C717200AAD9F3 /* SplitViewBarButtonItemPresenter.h */,
 				84F9C03A167C71DE00AAD9F3 /* RotatableViewController.h */,
 				84F9C03B167C71DE00AAD9F3 /* RotatableViewController.m */,
@@ -215,6 +220,7 @@
 				845516E7167068770025F7C0 /* HappinessViewController.m in Sources */,
 				84F9C03C167C71DE00AAD9F3 /* RotatableViewController.m in Sources */,
 				84555FEA167CC9F0002FCB4A /* RotatableNavigationController.m in Sources */,
+				84AA4027167DA5BD009070F3 /* WebsiteViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
