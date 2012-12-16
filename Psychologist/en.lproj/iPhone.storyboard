@@ -230,10 +230,10 @@
             </objects>
             <point key="canvasLocation" x="1149" y="90"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Rotatable Navigation Controller-->
         <scene sceneID="SCd-jf-a8F">
             <objects>
-                <navigationController id="A7k-YH-Qon" sceneMemberID="viewController">
+                <navigationController id="A7k-YH-Qon" customClass="RotatableNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="aYN-cx-avQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -368,6 +368,9 @@
         </class>
         <class className="PsychologistViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PsychologistViewController.h"/>
+        </class>
+        <class className="RotatableNavigationController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RotatableNavigationController.h"/>
         </class>
         <class className="RotatableViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RotatableViewController.h"/>
