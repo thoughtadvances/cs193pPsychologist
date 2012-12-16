@@ -47,7 +47,6 @@
 
 - (void)transferSplitViewBarButtonItemToViewController:
 (id)destinationViewController { // Send a UIBarButtonItem to a new controller
-    NSLog(@"Transfer is called");
     UIBarButtonItem *splitViewBarButtonItem =
     [[self splitViewBarButtonItemPresenter] splitViewBarButtonItem];
     [[self splitViewBarButtonItemPresenter] setSplitViewBarButtonItem:nil];
@@ -85,6 +84,8 @@
     if (![detailViewController.title isEqualToString:
           @"Psychologist1ViewController"]) { // It is the wrong UIViewController
         UIViewController *Psychologist1ViewController = [self.storyboard instantiateViewControllerWithIdentifier: @"Psychologist1ViewController"];
+        [self transferSplitViewBarButtonItemToViewController:
+         Psychologist1ViewController]; // Send button to the new controller
         NSMutableArray *viewControllers = [[self.splitViewController
                                             viewControllers] mutableCopy];
         [viewControllers replaceObjectAtIndex:([viewControllers count] - 1) withObject:Psychologist1ViewController];
@@ -93,7 +94,6 @@
     }
 }
 
-// TODO: Get the toolbar button in these views, too.
 // TODO: Make these one function which sets happiness based on button title
 - (IBAction)flying {
     if (self.splitViewController) { // If iPad, then handle segue differently
