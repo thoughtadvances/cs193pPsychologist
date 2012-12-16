@@ -45,7 +45,6 @@
           withBarButtonItem:(UIBarButtonItem *)barButtonItem
        forPopoverController:(UIPopoverController *)pc {
     //
-    NSLog(@"self.title = %@", self.title);
     barButtonItem.title = self.title; // Title of the UIViewController
     [self splitViewBarButtonItemPresenter].splitViewBarButtonItem =
     barButtonItem;
@@ -55,11 +54,6 @@
      willShowViewController:(UIViewController *)aViewController
   invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem {
     [self splitViewBarButtonItemPresenter].splitViewBarButtonItem = nil;
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:
-(UIInterfaceOrientation)toInterfaceOrientation {
-    return YES;
 }
 
 @end
