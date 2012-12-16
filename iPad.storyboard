@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
-        <!--Happiness View Controller-->
+        <!--Happiness View Controller - Psychologist1ViewController-->
         <scene sceneID="KQe-bm-hyd">
             <objects>
-                <viewController id="KN0-gK-pw3" customClass="HappinessViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Psychologist1ViewController" title="Psychologist1ViewController" id="KN0-gK-pw3" customClass="HappinessViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Xn-60-J2Y">
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -22,11 +22,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="2m8-TW-2lY" firstAttribute="leading" secondItem="5Xn-60-J2Y" secondAttribute="leading" type="default" id="0hM-ny-ePm"/>
-                            <constraint firstItem="q3u-se-w9U" firstAttribute="top" secondItem="2m8-TW-2lY" secondAttribute="bottom" type="default" id="3Me-pB-XVm"/>
+                            <constraint firstItem="q3u-se-w9U" firstAttribute="top" secondItem="5Xn-60-J2Y" secondAttribute="top" constant="45" id="2g0-3A-YEH"/>
                             <constraint firstItem="q3u-se-w9U" firstAttribute="trailing" secondItem="5Xn-60-J2Y" secondAttribute="trailing" type="default" id="BhC-Q7-sAB"/>
+                            <constraint firstAttribute="bottom" secondItem="q3u-se-w9U" secondAttribute="bottom" constant="-1" id="Nkz-H0-n2C"/>
                             <constraint firstItem="q3u-se-w9U" firstAttribute="leading" secondItem="5Xn-60-J2Y" secondAttribute="leading" type="default" id="Nys-Uk-1Hg"/>
                             <constraint firstItem="2m8-TW-2lY" firstAttribute="top" secondItem="5Xn-60-J2Y" secondAttribute="top" type="default" id="PKS-df-HAg"/>
-                            <constraint firstItem="q3u-se-w9U" firstAttribute="bottom" secondItem="5Xn-60-J2Y" secondAttribute="bottom" type="default" id="SXp-u4-lZV"/>
                             <constraint firstItem="2m8-TW-2lY" firstAttribute="trailing" secondItem="5Xn-60-J2Y" secondAttribute="trailing" type="default" id="yAq-lB-ji6"/>
                         </constraints>
                     </view>
@@ -208,6 +208,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="BvL-Bw-TaR" kind="replace" identifier="Celebrity" splitViewControllerTargetIndex="1" id="vGP-cx-xCf"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="So, what brings you to my iPhone app today?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="292" translatesAutoresizingMaskIntoConstraints="NO" id="EsN-Bf-67n">
                                 <constraints>
@@ -226,6 +229,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Zib-Dd-5zP" kind="replace" identifier="Serious" splitViewControllerTargetIndex="1" id="hsr-YS-drW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FtA-vm-wAr">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -236,6 +242,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="cvS-58-49w" kind="replace" identifier="TVKook" splitViewControllerTargetIndex="1" id="cPA-gX-Wz2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -256,6 +265,130 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TB5-fp-raB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1773" y="82"/>
+        </scene>
+        <!--Happiness View Controller - Diagnosis-->
+        <scene sceneID="6dU-46-mjP">
+            <objects>
+                <viewController id="cvS-58-49w" customClass="HappinessViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3tA-5J-IbS">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6FD-ma-LYO" customClass="FaceView">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uwx-9t-QQG">
+                                <items/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6FD-ma-LYO" firstAttribute="top" secondItem="Uwx-9t-QQG" secondAttribute="bottom" type="default" id="EeQ-Dd-82O"/>
+                            <constraint firstItem="6FD-ma-LYO" firstAttribute="leading" secondItem="3tA-5J-IbS" secondAttribute="leading" type="default" id="MeC-Zk-fid"/>
+                            <constraint firstItem="Uwx-9t-QQG" firstAttribute="top" secondItem="3tA-5J-IbS" secondAttribute="top" type="default" id="Yfp-ej-uL6"/>
+                            <constraint firstItem="Uwx-9t-QQG" firstAttribute="leading" secondItem="3tA-5J-IbS" secondAttribute="leading" type="default" id="dgm-1t-Bc9"/>
+                            <constraint firstItem="Uwx-9t-QQG" firstAttribute="trailing" secondItem="3tA-5J-IbS" secondAttribute="trailing" type="default" id="fRi-n7-RNb"/>
+                            <constraint firstItem="6FD-ma-LYO" firstAttribute="trailing" secondItem="3tA-5J-IbS" secondAttribute="trailing" type="default" id="lpg-kJ-JdA"/>
+                            <constraint firstItem="6FD-ma-LYO" firstAttribute="bottom" secondItem="3tA-5J-IbS" secondAttribute="bottom" type="default" id="thM-xT-cZT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Diagnosis" id="L0E-fc-5ve"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <connections>
+                        <outlet property="faceView" destination="6FD-ma-LYO" id="oru-zF-aSX"/>
+                        <outlet property="toolbar" destination="Uwx-9t-QQG" id="yMZ-Mp-ivY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DzA-18-J6d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2161" y="1032"/>
+        </scene>
+        <!--Happiness View Controller - Diagnosis-->
+        <scene sceneID="CRd-hv-6nJ">
+            <objects>
+                <viewController id="Zib-Dd-5zP" customClass="HappinessViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qnr-n1-wAv">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UCb-im-LrT" customClass="FaceView">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2O-N3-moc">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Visit Dr. Pill's Website">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GKM-YT-8Tr">
+                                <items/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GKM-YT-8Tr" firstAttribute="top" secondItem="Qnr-n1-wAv" secondAttribute="top" type="default" id="DvW-l1-z9L"/>
+                            <constraint firstItem="GKM-YT-8Tr" firstAttribute="leading" secondItem="Qnr-n1-wAv" secondAttribute="leading" type="default" id="FU8-qi-m0S"/>
+                            <constraint firstItem="UCb-im-LrT" firstAttribute="top" secondItem="GKM-YT-8Tr" secondAttribute="bottom" type="default" id="bAH-6w-mJo"/>
+                            <constraint firstItem="GKM-YT-8Tr" firstAttribute="trailing" secondItem="Qnr-n1-wAv" secondAttribute="trailing" type="default" id="cgD-tb-UBN"/>
+                            <constraint firstItem="A2O-N3-moc" firstAttribute="top" secondItem="UCb-im-LrT" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hvE-mI-t4j"/>
+                            <constraint firstAttribute="bottom" secondItem="A2O-N3-moc" secondAttribute="bottom" constant="13" id="kyM-dp-Pny"/>
+                            <constraint firstItem="A2O-N3-moc" firstAttribute="centerX" secondItem="UCb-im-LrT" secondAttribute="centerX" type="default" id="pCf-0G-k7Z"/>
+                            <constraint firstItem="UCb-im-LrT" firstAttribute="leading" secondItem="Qnr-n1-wAv" secondAttribute="leading" type="default" id="sIU-pH-ys1"/>
+                            <constraint firstItem="GKM-YT-8Tr" firstAttribute="centerX" secondItem="UCb-im-LrT" secondAttribute="centerX" type="default" id="uYu-zy-92w"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Diagnosis" id="BKd-zV-bW5"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <connections>
+                        <outlet property="faceView" destination="UCb-im-LrT" id="UaX-Bb-KVP"/>
+                        <outlet property="toolbar" destination="GKM-YT-8Tr" id="DsA-KS-Ebl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ct4-M1-Myi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2161" y="-90"/>
+        </scene>
+        <!--Happiness View Controller - Diagnosis-->
+        <scene sceneID="TjQ-X9-2BP">
+            <objects>
+                <viewController id="BvL-Bw-TaR" customClass="HappinessViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I77-dG-6br">
+                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ex5-hc-iQG" customClass="FaceView">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gyD-R4-6fu">
+                                <items/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ex5-hc-iQG" firstAttribute="trailing" secondItem="I77-dG-6br" secondAttribute="trailing" type="default" id="1Tc-yw-UK7"/>
+                            <constraint firstItem="gyD-R4-6fu" firstAttribute="top" secondItem="I77-dG-6br" secondAttribute="top" type="default" id="7nU-8d-uDL"/>
+                            <constraint firstItem="ex5-hc-iQG" firstAttribute="bottom" secondItem="I77-dG-6br" secondAttribute="bottom" type="default" id="BrF-yC-myr"/>
+                            <constraint firstItem="ex5-hc-iQG" firstAttribute="top" secondItem="gyD-R4-6fu" secondAttribute="bottom" type="default" id="Ilv-rW-jc3"/>
+                            <constraint firstItem="ex5-hc-iQG" firstAttribute="leading" secondItem="I77-dG-6br" secondAttribute="leading" type="default" id="dPI-ti-HlC"/>
+                            <constraint firstItem="gyD-R4-6fu" firstAttribute="leading" secondItem="I77-dG-6br" secondAttribute="leading" type="default" id="jM4-nj-juz"/>
+                            <constraint firstItem="gyD-R4-6fu" firstAttribute="trailing" secondItem="I77-dG-6br" secondAttribute="trailing" type="default" id="mHp-h1-4CA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Diagnosis" id="U1u-wp-Fb6"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
+                    <connections>
+                        <outlet property="faceView" destination="ex5-hc-iQG" id="WEa-Y1-BwN"/>
+                        <outlet property="toolbar" destination="gyD-R4-6fu" id="5BO-wz-P20"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nbz-uP-8c2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2977" y="-96"/>
         </scene>
     </scenes>
     <classes>
