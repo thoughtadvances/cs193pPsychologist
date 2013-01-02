@@ -6,6 +6,14 @@
 //  Copyright (c) 2012 ThoughtAdvances. All rights reserved.
 //
 
+// Explanation
+//  This is a reusable class intended for making it easy to have a rotating
+//  UISplitViewController for the iPad which handles the plaement of the button
+//  for the master pop-up.  The three files for using it are:
+//      RotatableViewController.h
+//      RotatableViewController.m
+//      SplitViewBarButtonItemPresenter.h
+
 // How to Use
 //  After importing the 3 files into your project:
 //  - Make your master UIViewController a member of class
